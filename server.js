@@ -17,8 +17,8 @@ app.engine('html', require('ejs').renderFile);
 
 //set Static folder
 console.log(process.env.PWD)
-app.use(express.static('client'));
-app.use(express.static(path.join(__dirname, '../client/src')));
+app.use(express.static(path.join(__dirname, 'client'), { maxAge: 86400000 }));
+app.use(express.static(path.join(__dirname, '../client/src'), { maxAge: 86400000 }));
 
 // Body parser MW
 app.use(bodyParser.json());

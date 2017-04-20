@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 //set Static folder
-console.log(path.join(__dirname, 'client'))
+console.log(process.env.PWD)
 app.use(express.static(path.join(__dirname, 'client')));
 app.use(express.static(path.join(__dirname, '../client/src')));
 

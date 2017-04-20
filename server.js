@@ -17,7 +17,7 @@ app.engine('html', require('ejs').renderFile);
 
 //set Static folder
 console.log(process.env.PWD)
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static('client'));
 app.use(express.static(path.join(__dirname, '../client/src')));
 
 // Body parser MW
